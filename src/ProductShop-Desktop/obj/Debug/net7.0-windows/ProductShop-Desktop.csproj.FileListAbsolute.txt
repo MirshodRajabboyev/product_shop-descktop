@@ -27,3 +27,13 @@ C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\Produ
 C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\obj\Debug\net7.0-windows\ProductShop-Desktop.genruntimeconfig.cache
 C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\obj\Debug\net7.0-windows\ref\ProductShop-Desktop.dll
 C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Victus\OneDrive\Рабочий стол\product_shop-descktop\src\ProductShop-Desktop\bin\Debug\net7.0-windows\RestClient.dll

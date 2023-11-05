@@ -11,10 +11,10 @@
             <TextBox x:Name="tbSearch" Background="Transparent"  Height="20" Width="110" BorderThickness="0"/>
 
         </Border>
-        <Border Background="#FF3D5160" Height="30" Width="90" Margin="1085,25,25,645" CornerRadius="15">
-            <Button BorderThickness="0" Foreground="White" Height="30" Width="90"  Content="Search" x:Name="search" Background="Transparent" Click="search_Click"/>
+        <Border Background="Transparent" Height="30" Width="90" Margin="1085,25,25,645" CornerRadius="0">
+            <Button BorderThickness="0" Foreground="White" Height="25" Width="90"  Content="Search" x:Name="search" Background="#FF3D5160" Click="search_Click"/>
         </Border>
-        
+
 
         <Border Height="25" 
                 Margin="21,87,0,572"
@@ -108,7 +108,7 @@
                                 BorderThickness="2"
                                 BorderBrush="#8A94A6"
                                 HorizontalAlignment="Left" RenderTransformOrigin="0.499,0.577">
-            <ComboBox Width="135" Height="20" Background="#FFE8E8E8" SelectedIndex="0" x:Name="cbBrand" BorderThickness="0" >
+            <ComboBox Width="135" Height="20" SelectedIndex="0" x:Name="cbBrand" BorderThickness="0" Background="#FFE8E8E8" >
                 <ComboBoxItem Content="Brand"></ComboBoxItem>
             </ComboBox>
         </Border>
@@ -125,8 +125,8 @@
             </ComboBox>
         </Border>
 
-        <Border Background="#FF3D5160"  Height="30" Width="90" Margin="791,0,0,485" CornerRadius="15">
-            <Button x:Name="apply" Foreground="White" Click="apply_Click" Content="Apply" BorderThickness="0" Background="Transparent"/>
+        <Border Background="#FF3D5160"  Height="25" Width="90" Margin="791,0,0,485" CornerRadius="0">
+            <Button x:Name="apply" Foreground="White" Click="apply_Click" Content="Apply" BorderThickness="0" Background="#00000000"/>
 
         </Border>
 
@@ -135,7 +135,7 @@
                   AlternatingRowBackground="#ABADB3"
                   Foreground="Black"
                   Background="#3D5160" VerticalAlignment="Top" HorizontalAlignment="Center" 
-                  Height="529" Width="1164" Margin="0,146,0,0" BorderThickness="1" BorderBrush="#FF212F42" 
+                  Height="475" Width="1164" Margin="0,146,0,0" BorderThickness="1" BorderBrush="#FF212F42" 
                   FontFamily="Arial" FontSize="22" FontWeight="SemiBold" FontStyle="Italic">
 
             <DataGrid.Resources>
@@ -162,6 +162,27 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="0,625,0,42">
+            <Button  x:Name="btnPervouce"
+                     Background="AliceBlue"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Content="Pervouce"
+                        BorderThickness="0"
+                        Click="PreviousPage_Click" Margin="5"/>
+            <TextBlock Foreground="#3D5160" x:Name="tbPage" Text="1" VerticalAlignment="Center" FontSize="20"/>
+            <TextBlock  Foreground="#3D5160" x:Name="tbbackslash" Text="/" VerticalAlignment="Center" FontSize="20"/>
+            <TextBlock  Foreground="#3D5160" x:Name="tbTotalPage" Text="1" VerticalAlignment="Center" FontSize="20"/>
+            <Button 
+                        x:Name="btnNext"
+                        Foreground="#3D5160"
+                        Background="AliceBlue"
+                        Width="80" 
+                        Content="Next"
+                        BorderThickness="0"
+                        Click="NextPage_Click" 
+                        Margin="5" />
+        </StackPanel>
     </Grid>
 
 </Window>

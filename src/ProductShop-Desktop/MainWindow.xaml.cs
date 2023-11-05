@@ -58,16 +58,16 @@ namespace ProductShop_Desktop
                 cbCategory.Items.Add(categories[i].Name);
             }
 
-            for (int i = 0; i < products.Count; i++)
+            for (int i = 0; i < products.productGetViewModels.Count; i++)
             {
                 ProductGetViewModel productGetViewModel = new ProductGetViewModel();
-                productGetViewModel.Id = products[i].Id;
-                productGetViewModel.BrandName = products[i].BrandName;
-                productGetViewModel.CategoryName = products[i].CategoryName;
-                productGetViewModel.Name = products[i].Name;
-                productGetViewModel.UnitPrice = products[i].UnitPrice;
-                productGetViewModel.Description = products[i].Description;
-                productGetViewModel.CreatedAt = products[i].CreatedAt;
+                productGetViewModel.Id = products.productGetViewModels[i].Id;
+                productGetViewModel.BrandName = products.productGetViewModels[i].BrandName;
+                productGetViewModel.CategoryName = products.productGetViewModels[i].CategoryName;
+                productGetViewModel.Name = products.productGetViewModels[i].Name;
+                productGetViewModel.UnitPrice = products.productGetViewModels[i].UnitPrice;
+                productGetViewModel.Description = products.productGetViewModels[i].Description;
+                productGetViewModel.CreatedAt = products.productGetViewModels[i].CreatedAt;
                 
                 dgProducts.Items.Add(productGetViewModel);
             }
@@ -88,14 +88,14 @@ namespace ProductShop_Desktop
             if (int.Parse(tbMin.Text) <= int.Parse(tbMax.Text) & dpBolshalnishVaqt.SelectedDate.Value <= dpTugashVaqt.SelectedDate.Value &
                 cbBrand.SelectionBoxItem.ToString() != "Brand" & cbCategory.SelectionBoxItem.ToString() != "Category")
             {
-                for (int i = 0; i < products.Count; i++)
+                for (int i = 0; i < products.productGetViewModels.Count; i++)
                 {
-                    if ((products[i].UnitPrice >= int.Parse(tbMin.Text) & products[i].UnitPrice <= int.Parse(tbMax.Text)) &
-                        (products[i].CategoryName == cbCategory.SelectedItem.ToString()) &
-                        (products[i].BrandName == cbBrand.SelectedItem.ToString()) &
-                        (products[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
+                    if ((products.productGetViewModels[i].UnitPrice >= int.Parse(tbMin.Text) & products.productGetViewModels[i].UnitPrice <= int.Parse(tbMax.Text)) &
+                        (products.productGetViewModels[i].CategoryName == cbCategory.SelectedItem.ToString()) &
+                        (products.productGetViewModels[i].BrandName == cbBrand.SelectedItem.ToString()) &
+                        (products.productGetViewModels[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products.productGetViewModels[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
                     {
-                        dgProducts.Items.Add(products[i]);
+                        dgProducts.Items.Add(products.productGetViewModels[i]);
                     }
                 }
             }
@@ -103,13 +103,13 @@ namespace ProductShop_Desktop
             else if (int.Parse(tbMin.Text) <= int.Parse(tbMax.Text) & dpBolshalnishVaqt.SelectedDate.Value <= dpTugashVaqt.SelectedDate.Value &
                 cbBrand.SelectionBoxItem.ToString() != "Brand" & cbCategory.SelectionBoxItem.ToString() == "Category")
             {
-                for (int i = 0; i < products.Count; i++)
+                for (int i = 0; i < products.productGetViewModels.Count; i++)
                 {
-                    if ((products[i].UnitPrice >= int.Parse(tbMin.Text) & products[i].UnitPrice <= int.Parse(tbMax.Text)) &
-                        (products[i].BrandName == cbBrand.SelectedItem.ToString()) &
-                        (products[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
+                    if ((products.productGetViewModels[i].UnitPrice >= int.Parse(tbMin.Text) & products.productGetViewModels[i].UnitPrice <= int.Parse(tbMax.Text)) &
+                        (products.productGetViewModels[i].BrandName == cbBrand.SelectedItem.ToString()) &
+                        (products.productGetViewModels[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products.productGetViewModels[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
                     {
-                        dgProducts.Items.Add(products[i]);
+                        dgProducts.Items.Add(products.productGetViewModels[i]);
                     }
                 }
             }
@@ -117,25 +117,25 @@ namespace ProductShop_Desktop
             else if (int.Parse(tbMin.Text) <= int.Parse(tbMax.Text) & dpBolshalnishVaqt.SelectedDate.Value <= dpTugashVaqt.SelectedDate.Value &
                 cbBrand.SelectionBoxItem.ToString() == "Brand" & cbCategory.SelectionBoxItem.ToString() != "Category")
             {
-                for (int i = 0; i < products.Count; i++)
+                for (int i = 0; i < products.productGetViewModels.Count; i++)
                 {
-                    if ((products[i].UnitPrice >= int.Parse(tbMin.Text) & products[i].UnitPrice <= int.Parse(tbMax.Text)) &
-                        (products[i].CategoryName == cbCategory.SelectedItem.ToString()) &
-                        (products[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
+                    if ((products.productGetViewModels[i].UnitPrice >= int.Parse(tbMin.Text) & products.productGetViewModels[i].UnitPrice <= int.Parse(tbMax.Text)) &
+                        (products.productGetViewModels[i].CategoryName == cbCategory.SelectedItem.ToString()) &
+                        (products.productGetViewModels[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products.productGetViewModels[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
                     {
-                        dgProducts.Items.Add(products[i]);
+                        dgProducts.Items.Add(products.productGetViewModels[i]);
                     }
                 }
             }
             else if (int.Parse(tbMin.Text) <= int.Parse(tbMax.Text) & dpBolshalnishVaqt.SelectedDate.Value <= dpTugashVaqt.SelectedDate.Value &
                 cbBrand.SelectionBoxItem.ToString() == "Brand" & cbCategory.SelectionBoxItem.ToString() == "Category")
             {
-                for (int i = 0; i < products.Count; i++)
+                for (int i = 0; i < products.productGetViewModels.Count; i++)
                 {
-                    if ((products[i].UnitPrice >= int.Parse(tbMin.Text) & products[i].UnitPrice <= int.Parse(tbMax.Text)) &
-                        (products[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
+                    if ((products.productGetViewModels[i].UnitPrice >= int.Parse(tbMin.Text) & products.productGetViewModels[i].UnitPrice <= int.Parse(tbMax.Text)) &
+                        (products.productGetViewModels[i].UpdatedAt >= dpBolshalnishVaqt.SelectedDate.Value & products.productGetViewModels[i].UpdatedAt <= dpTugashVaqt.SelectedDate.Value))
                     {
-                        dgProducts.Items.Add(products[i]);
+                        dgProducts.Items.Add(products.productGetViewModels[i]);
                     }
                 }
             }
@@ -197,14 +197,81 @@ namespace ProductShop_Desktop
                 cbCategory.Items.Add(categories[i].Name);
             }
 
-            for (int i = 0; i < products.Count; i++)
+            for (int i = 0; i < products.productGetViewModels.Count; i++)
             {
-                string mainString = (products[i].Id.ToString() + " " + products[i].Name + " " + products[i].CategoryName + " " + products[i].BrandName).ToLower();
+                string mainString = (products.productGetViewModels[i].Id.ToString() + " " + products.productGetViewModels[i].Name + " " + products.productGetViewModels[i].CategoryName + " " + products.productGetViewModels[i].BrandName).ToLower();
                 if (mainString.Contains(tbSearch.Text.ToLower()))
                 {
-                    dgProducts.Items.Add(products[i]);
+                    dgProducts.Items.Add(products.productGetViewModels[i]);
                 }
             }
+        }
+
+
+        public async Task refreshAsync()
+        {
+            //await RefreshWithLike();
+
+
+            dgProducts.Items.Clear();
+            int page = int.Parse(tbPage.Text);
+            var result = await _productService.GetAllViewAsync(page);
+            var pagination = result.pageData;
+            if (result.pageData.TotalPages < 2)
+            {
+                tbPage.Visibility = Visibility.Collapsed;
+                tbTotalPage.Visibility = Visibility.Collapsed;
+                tbbackslash.Visibility = Visibility.Collapsed;
+                btnNext.Visibility = Visibility.Collapsed;
+                btnPervouce.Visibility = Visibility.Collapsed;
+            }
+            tbTotalPage.Text = result.pageData.TotalPages.ToString();
+            var products = result.productGetViewModels;
+            var brands = await _brandService.GetAllAsync(1);
+            var categories = await _categoryService.GetAllAsync(1);
+            tbMin.Text = "2000";
+            tbMax.Text = "7500000";
+            for (int i = 0; i < brands.Count; i++)
+            {
+                cbBrand.Items.Add(brands[i].Name);
+            }
+
+            for (int i = 0; i < categories.Count; i++)
+            {
+                cbCategory.Items.Add(categories[i].Name);
+            }
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                ProductGetViewModel productGetViewModel = new ProductGetViewModel();
+                productGetViewModel.Id = products[i].Id;
+                productGetViewModel.BrandName = products[i].BrandName;
+                productGetViewModel.CategoryName = products[i].CategoryName;
+                productGetViewModel.Name = products[i].Name;
+                productGetViewModel.UnitPrice = products[i].UnitPrice;
+                productGetViewModel.Description = products[i].Description;
+                productGetViewModel.CreatedAt = products[i].CreatedAt;
+
+                dgProducts.Items.Add(productGetViewModel);
+            }
+        }
+        private async void PreviousPage_Click(object sender, RoutedEventArgs e)
+        {
+            
+            btnPervouce.IsEnabled = false;
+            int page = int.Parse(tbPage.Text);
+            if (page > 1)
+            {
+                page -= 1;
+                tbPage.Text = page.ToString();
+                await refreshAsync();
+            }
+            btnPervouce.IsEnabled = true;
+        }
+
+        private void NextPage_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

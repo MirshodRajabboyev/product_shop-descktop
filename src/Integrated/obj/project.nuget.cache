@@ -1,10 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "au6pu8mu/q3Z4d+R6hkaS7zKXFEFOLQrNLYiz2AMsRjheBEfedcVRJGNgxLN+++e7HBrNM3fCvufcjJhzStX9w==",
+  "dgSpecHash": "lTQuJGg7ikwgooxE0z7w0rN8VYDGEJo3kU+uS0hWjRfHfWIYCc2vN0NeZq5yEdNHfP8/f5UOIfIt16bmtpcvTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\product_shop-descktop\\src\\Integrated\\Integrated.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Victus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.4\\microsoft.extensions.configuration.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.4\\microsoft.extensions.configuration.abstractions.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.4\\microsoft.extensions.configuration.fileextensions.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.4\\microsoft.extensions.configuration.json.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.4\\microsoft.extensions.fileproviders.abstractions.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.4\\microsoft.extensions.fileproviders.physical.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.4\\microsoft.extensions.filesystemglobbing.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.4\\microsoft.extensions.logging.abstractions.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.4\\microsoft.extensions.primitives.3.1.4.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Victus\\.nuget\\packages\\restclient\\3.1024.23771\\restclient.3.1024.23771.nupkg.sha512"
   ],
   "logs": []
 }

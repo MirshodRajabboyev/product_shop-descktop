@@ -1,30 +1,32 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ViewModels.Common;
 using ViewModels.Products;
 
 namespace Integrated.ServiceLayer.Products.Concrete;
 
 public class ProductService : IProductService
 {
-    public async Task<List<ProductGetViewModel>> GetAllViewAsync(int page = 1)
+    public async Task<(List<ProductGetViewModel> productGetViewModels, Pagination pageData)> GetAllViewAsync(int page)
     {
         using (var client = new HttpClient())
         {
-            //Pagination pagination = new Pagination();
+            Pagination pagination = new Pagination();
             var response = await client.GetAsync(API.BASE_URL + $"common/products/All?page={page}");
             response.EnsureSuccessStatusCode();
 
 
             if (response.IsSuccessStatusCode)
             {
-                //if (response.Headers.TryGetValues("x-pagination", out var headerValues))
-                //{
-                //    string headerValue = headerValues.FirstOrDefault();
-                //    pagination = Newtonsoft.Json.JsonConvert.DeserializeObject<Pagination>(headerValue);
+                if (response.Headers.TryGetValues("x-pagination", out var headerValues))
+                {
+                    string headerValue = headerValues.FirstOrDefault();
+                    pagination = Newtonsoft.Json.JsonConvert.DeserializeObject<Pagination>(headerValue);
 
-                //}
+                }
 
                 var responseData = await response.Content.ReadAsStringAsync();
                 IEnumerable<ProductGetViewModel> readProducts = JsonConvert.DeserializeObject<IEnumerable<ProductGetViewModel>>(responseData);
@@ -45,11 +47,11 @@ public class ProductService : IProductService
                         UpdatedAt = i.UpdatedAt
                     });
                 }
-                return (productList);
+                return (productList, pageData: pagination);
             }
             else
             {
-                return (new List<ProductGetViewModel>());
+                return (new List<ProductGetViewModel>(), new Pagination());
             }
         }
 
